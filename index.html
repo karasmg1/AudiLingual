@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="custom.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>Генератор mp3</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="index.html">Одиночная генерация</a>
+                        </li>
+                        <li>
+                            <a href="packet.html">Пакетная генерация</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <form id="form" role="form">
+                            <div class="form-group">
+                                <label class="control-label" for="rus-text">Введите текст на руском языке</label>
+                                <input class="form-control" id="rus-text"
+                                placeholder="Введите слово или фразу" type="text">
+                                <label class="control-label" for="lang-text">Введите текст на иностранном языке</label>
+                                <div class="btn-group btn-group-xs"
+                                data-toggle="buttons">
+                                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Язык <span class="fa fa-caret-down"></span></a>
+                                    <input id="language" value="" type="text" hidden="hidden">
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                            <a href="#">en</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">de</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <input class="form-control" id="lang-text" placeholder="Введите слово или фразу"
+                                type="text">
+                                <label class="control-label" for="file-name">Введите имя файла mp3</label>
+                                <input class="form-control" id="file-name"
+                                placeholder="FileName" type="text">
+                            </div>
+                            <button class="btn btn-default" id="savemp3" type="submit">Сохранить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="TranslateRuWidget"></div>
+        <div class="section" id="mp3files">
+            <div class="container">
+                <div class="row">
+                    <div id="result-mp3" class="col-md-12">
+                        <h4 contenteditable="true">Файлы для скачивания:</h4>
+                        <ul>
+                            <li id="mp3-file1">
+                                <a href="..">One</a>
+                            </li>
+                            <li id="mp3-file2">
+                                <a href="..">Two</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="section section-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Генератор карточек для изучения иностранных языков</h1>
+                        <p>Набирайте фразы и переводы и скачивайте их в формате mp3&nbsp;</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-info text-right">
+                            <br>
+                            <br>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs text-right">
+                                <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                                <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
