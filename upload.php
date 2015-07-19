@@ -5,25 +5,19 @@ include 'savePhrase.php';
 $data = array();
 // print_r ($_POST);
 $lang = $_POST[lang];
-    $error = false;
-    $files = array();
+$error = false;
+$files = array();
  
-    $uploaddir = 'uploads/';
+$uploaddir = 'uploads/';
 
-    // переместим файлы из временной директории в указанную
-    
-		
-        if( move_uploaded_file( $_FILES[0]['tmp_name'], $uploaddir.$_FILES[0][name]) ) {
-            
+// переместим файлы из временной директории в указанную
+if( move_uploaded_file( $_FILES[0]['tmp_name'], $uploaddir.$_FILES[0][name]) ) {
 	//		 echo "<p>$files:</p>";
 	//		 print_r ($files);
-        }
-        else{
-            $error = true;
-        }
-    
- 
-
+}
+else{
+    $error = true;
+}
 
 $uploadfile = $uploaddir.$_FILES[0][name];
    
